@@ -1,4 +1,4 @@
-# RTL SPI Controller (SystemVerilog)
+# SPI Controller (SystemVerilog)
 
 ## Project Description
 
