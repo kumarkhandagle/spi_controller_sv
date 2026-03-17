@@ -11,8 +11,9 @@ RTL Design and Verification project for an SPI Master Controller implemented in 
 </p>
 
 <p align="center">
-<a href="../../issues/new?template=bug_report.md">Report a Bug</a> ·
-<a href="../../issues/new?template=feature_request.md">Request a Feature</a> ·
+<a href="https://github.com/kumarkhandagle/spi_controller_sv/issues/new?template=bug_report.md">Report a Bug</a> ·
+<a href="https://github.com/kumarkhandagle/spi_controller_sv/issues/new?template=feature_request.md">Request a Feature</a> ·
+<a href="https://github.com/kumarkhandagle/spi_controller_sv/issues">Ask a Question</a>
 </p>
 
 <p align="center">
