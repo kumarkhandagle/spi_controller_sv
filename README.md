@@ -145,7 +145,7 @@ git checkout -b feature/your-feature-name
 
 ## License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the [**MIT License**](https://github.com/kumarkhandagle/spi_controller_sv/blob/main/LICENSE.txt)
 
 
 
