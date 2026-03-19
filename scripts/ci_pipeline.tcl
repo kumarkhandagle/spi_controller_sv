@@ -1,7 +1,7 @@
 ###########################################################
 # CI Pipeline for Vivado
 ###########################################################
-cd C:VIT_INTERN/Runner_demo/spi_controller_sv/
+
 set log_file "C:/VIT_INTERN/Runner_demo/spi_controller_sv/ci_error_log.txt"
 
 if {[file exists $log_file]} { file delete -force $log_file }
