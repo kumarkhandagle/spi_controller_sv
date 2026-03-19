@@ -1,0 +1,38 @@
+name: Vivado CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run Vivado
+        run: vivado -mode batch -nojournal -nolog -notrace -source C:\VIT_INTERN\Runner_demo\spi_controller_sv\ci_pipeline.tcl
+
+      - name: Check Vivado log for errors
+        shell: PowerShell
+        run: |
+          $logPath = "C:\VIT_INTERN\Runner_demo\spi_controller_sv\ci_error_log.log"
+
+          if (-not (Test-Path $logPath)) {
+            Write-Output "Log file not found at '$logPath' — failing the step."
+            exit 1
+          }
+
+          $content  = Get-Content -Path $logPath
+          $hasError = $content | Where-Object { $_ -match '^ERROR:' }
+
+          if ($hasError) {
+            Write-Output "Errors found in the log — failing the step."
+            $hasError | ForEach-Object { Write-Output "  $_" }
+            exit 1
+          } else {
+            Write-Output "No errors found — build passed."
+          }
