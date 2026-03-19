@@ -22,7 +22,7 @@ jobs:
           $logPath = "C:\VIT_INTERN\Runner_demo\spi_controller_sv\ci_error_log.log"
 
           if (-not (Test-Path $logPath)) {
-            Write-Output "Log file not found at '$logPath' — failing the step."
+            Write-Output "Log file not found at '$logPath' - failing the step."
             exit 1
           }
 
@@ -30,9 +30,9 @@ jobs:
           $hasError = $content | Where-Object { $_ -match '^ERROR:' }
 
           if ($hasError) {
-            Write-Output "Errors found in the log — failing the step."
+            Write-Output "Errors found in the log - failing the step."
             $hasError | ForEach-Object { Write-Output "  $_" }
             exit 1
           } else {
-            Write-Output "No errors found — build passed."
+            Write-Output "No errors found - build passed."
           }
