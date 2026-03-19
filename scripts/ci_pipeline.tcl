@@ -1,6 +1,7 @@
 ###########################################################
 # CI Pipeline for Vivado
 ###########################################################
+##############
 
 set log_file "C:/VIT_INTERN/Runner_demo/spi_controller_sv/ci_error_log.txt"
 
